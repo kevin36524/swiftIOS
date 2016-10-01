@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:NSOperation.playground">
+   </FileRef>
+   <FileRef
       location = "group:Compressor/Compressor.xcodeproj">
    </FileRef>
    <FileRef
