@@ -4,6 +4,7 @@ import UIKit
 
 //: # Operation
 //: Operation represents a 'unit of work' and can be constructed in a few ways.
+
 //: ## BlockOperation
 //: BlockOperation allows you to create an Operation from one or more closures.
 
@@ -37,3 +38,5 @@ multiPrinter.addExecutionBlock { print ("concurrently"); sleep(5);}
 startClock()
 multiPrinter.start()
 stopClock()
+
+//: ## Subclassing Operation -- Create your own Operation
