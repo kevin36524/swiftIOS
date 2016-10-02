@@ -2,12 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:NSOperation.playground">
+      location = "group:/Users/patelkev/iosTutorials/swiftIOS/NSOperation/Operation-Intro.playground">
    </FileRef>
    <FileRef
       location = "group:Compressor/Compressor.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Decompressor.playground">
    </FileRef>
 </Workspace>

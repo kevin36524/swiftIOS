@@ -1,6 +1,7 @@
 //: Playground - noun: a place where people can play
 
 import UIKit
+import Compressor
 
 //: # Operation
 //: Operation represents a 'unit of work' and can be constructed in a few ways.
@@ -64,5 +65,34 @@ tsOp.start()
 stopClock()
 
 tsOp.outputImage
+
+
+
+//: ## Subclassing Operation -- example 2
+
+let compressedFilePath = Bundle.main.path(forResource: "dark_road_small", ofType: "compressed")
+
+class DecompressOperation: Operation {
+    var inputPath: String?
+    var outputImage: UIImage?
+    
+    override func main() {
+        guard let inputPath = inputPath else {
+            return
+        }
+        
+        if let decompressedData = Compressor.loadCompressedFile(inputPath) {
+            outputImage = UIImage(data: decompressedData)
+        }
+    }
+}
+
+let commpressionOperation = DecompressOperation()
+commpressionOperation.inputPath = compressedFilePath
+startClock()
+commpressionOperation.start()
+stopClock()
+
+commpressionOperation.outputImage
 
 
