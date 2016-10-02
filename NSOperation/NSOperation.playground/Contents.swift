@@ -40,3 +40,29 @@ multiPrinter.start()
 stopClock()
 
 //: ## Subclassing Operation -- Create your own Operation
+let inputImage = UIImage(named: "dark_road_small.jpg")
+
+class TiltShiftOperation : Operation {
+    var inputImage: UIImage?
+    var outputImage: UIImage?
+    
+    override func main() {
+        guard let inputImage = inputImage else {
+            return
+        }
+        
+        let mask = topAndBottomGradient(size: inputImage.size)
+        outputImage = inputImage.applyBlurWithRadius(blurRadius: 4, maskImage: mask)
+    }
+}
+
+let tsOp = TiltShiftOperation()
+tsOp.inputImage = inputImage
+
+startClock()
+tsOp.start()
+stopClock()
+
+tsOp.outputImage
+
+
