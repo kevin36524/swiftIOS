@@ -4,5 +4,6 @@
         <page name='OperationQueue'/>
         <page name='Operation'/>
         <page name='AsynOperation'/>
+        <page name='DependencyOperation'/>
     </pages>
 </playground>
