@@ -67,7 +67,54 @@ extension AsyncOperation {
     }
 }
 
-// Concrete subclass of AsyncOperation that defines Main
+// eg 1 Concrete subclass of AsyncOperation that defines Main
+
+
+// Step 1 Defining an Async Add Func
+func asyncAdd(lhs: Int, rhs: Int, callback:@escaping (Int) -> Void) {
+    OperationQueue().addOperation {
+        sleep(2)
+        let returnVal = lhs + rhs;
+        callback(returnVal);
+    }
+}
+
+// Step 2 Now making an async operation which invokes the asyncAdd func
+
+class AsyncAddOperation: AsyncOperation {
+    private var lhs:Int;
+    private var rhs:Int;
+    public var result:Int?;
+    
+    init(lhs: Int, rhs: Int) {
+        self.lhs = lhs;
+        self.rhs = rhs;
+        super.init()
+    }
+    
+    override func main() {
+        asyncAdd(lhs: lhs, rhs: rhs) { (result) in
+            self.result = result;
+            self.state = .Finished;
+        }
+    }
+}
+
+// Step 3 Invoke the asyncAddOperation
+let asyncAddQueue = OperationQueue();
+let elementsToBeAdded = [(2,3), (3,4), (4,5)];
+
+for element in elementsToBeAdded {
+    let addOperation = AsyncAddOperation(lhs: element.0, rhs: element.1);
+    addOperation.completionBlock = {
+        print(" Result is \(addOperation.result)");
+    }
+    asyncAddQueue.addOperation(addOperation);
+}
+
+asyncAddQueue.waitUntilAllOperationsAreFinished()
+
+// eg 2 Concrete subclass of AsyncOperation that defines Main
 
 class DataOperation: AsyncOperation {
     private let url: URL
