@@ -166,6 +166,64 @@ public func |> (lhs: Operation, rhs: Operation) -> Operation {
 }
 
 
+func slowAdd(input: (Int, Int)) -> Int {
+    sleep(1)
+    return input.0 + input.1
+}
+
+func slowAddArray(input: [(Int, Int)], progress: ((Double) -> (Bool))) -> [Int] {
+    var results = [Int]()
+    for pair in input {
+        results.append(slowAdd(input:pair))
+        if !progress(Double(results.count) / Double(input.count)) { return results }
+    }
+    return results
+}
+
+
+public class AnotherArraySumOperation: Operation {
+    public var inputArr:[(Int, Int)]
+    public var outputArr: [Int]?
+    
+    init(input: [(Int, Int)]) {
+        inputArr = input
+        super.init()
+    }
+    
+    public override func main() {
+        outputArr = slowAddArray(input: inputArr, progress: { progress in
+            print("\(progress) I am progressing");
+            return !self.isCancelled;
+        })
+    }
+}
+
+func testrun() {
+    let numberArray = [(1,2), (3,4), (5,6), (7,8), (9,10)]
+    let sumOperation = AnotherArraySumOperation(input: numberArray)
+    let cancelQueue = OperationQueue()
+    
+    sumOperation.completionBlock = {
+        if let outputArr = sumOperation.outputArr {
+            print(outputArr);
+        }
+    }
+    
+    DispatchQueue.main.asyncAfter(deadline: .now()) {
+        sumOperation.cancel()
+    }
+    
+    cancelQueue.addOperation(sumOperation)
+    
+    
+    cancelQueue.waitUntilAllOperationsAreFinished()
+}
+
+public func testFunc(closure:@escaping () -> Void) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+        closure();
+    }
+}
 
 
 
