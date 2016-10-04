@@ -5,7 +5,7 @@ let compressedImagePaths = ["01", "02", "03", "04", "05"].map {
     Bundle.main.path(forResource: "sample_\($0)_small", ofType: "compressed")
 }
 
-var decompressedImages = [UIImage]()
+var tiltShiftedImages = [UIImage]()
 
 let queue = OperationQueue()
 let appendQueue = OperationQueue()
@@ -20,19 +20,21 @@ for path in compressedImagePaths {
     let dataFetchAsyncOperation = DataFetchAsyncOperation(urlPath: inputURLPath);
     
     let imageDecompressionDataOperation = ImageDecompressionDataOperation();
-    imageDecompressionDataOperation.completionBlock = {
-        guard let outputImage = imageDecompressionDataOperation.outputImage else { return }
+    
+    let tiltShiftDependencyOperation = TiltShiftDependencyOperation();
+    tiltShiftDependencyOperation.completionBlock = {
+        guard let outputImage = tiltShiftDependencyOperation.outputImage else { return }
         appendQueue.addOperation {
-            decompressedImages.append(outputImage)
+            tiltShiftedImages.append(outputImage)
         }
     }
     
-    dataFetchAsyncOperation |> imageDecompressionDataOperation
+    (dataFetchAsyncOperation |> imageDecompressionDataOperation) |> tiltShiftDependencyOperation
     
-    queue.addOperations([imageDecompressionDataOperation, dataFetchAsyncOperation], waitUntilFinished: false)
+    queue.addOperations([dataFetchAsyncOperation, imageDecompressionDataOperation, tiltShiftDependencyOperation], waitUntilFinished: false)
     
 }
 
 queue.waitUntilAllOperationsAreFinished()
 
-decompressedImages;
+tiltShiftedImages;

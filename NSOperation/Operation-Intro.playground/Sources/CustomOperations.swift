@@ -131,6 +131,33 @@ public class ImageDecompressionDataOperation: Operation {
     }
 }
 
+protocol TiltShiftDependencyOperationDataProvider {
+    var decompressedImage: UIImage? {get}
+}
+
+extension ImageDecompressionDataOperation: TiltShiftDependencyOperationDataProvider {
+    var decompressedImage: UIImage? {
+        return self.outputImage;
+    }
+}
+
+public class TiltShiftDependencyOperation: Operation {
+    public var inputImage: UIImage?
+    public var outputImage: UIImage?
+    
+    public override func main() {
+        if let dependencyOperation = dependencies
+            .filter({$0 is TiltShiftDependencyOperationDataProvider})
+            .first as? TiltShiftDependencyOperationDataProvider {
+            inputImage = dependencyOperation.decompressedImage
+        }
+        
+        guard let unwrappedInputImage = inputImage else {return}
+        
+        let mask = topAndBottomGradient(size: unwrappedInputImage.size)
+        outputImage = unwrappedInputImage.applyBlurWithRadius(blurRadius: 10, maskImage: mask)
+    }
+}
 
 infix operator |> { associativity left precedence 160 }
 public func |> (lhs: Operation, rhs: Operation) -> Operation {
