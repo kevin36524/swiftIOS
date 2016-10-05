@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TiltShiftTableView/TiltShiftTableView.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:/Users/patelkev/iosTutorials/swiftIOS/NSOperation/Operation-Intro.playground">
    </FileRef>
    <FileRef
