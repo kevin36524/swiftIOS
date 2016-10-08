@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C5A55741DA93F9400B7DDEA /* GradientGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A55731DA93F9400B7DDEA /* GradientGenerator.swift */; };
+		4C5A55751DA9504400B7DDEA /* sample_06_small.compressed in Resources */ = {isa = PBXBuildFile; fileRef = 4C5BCC4B1DA545440063D165 /* sample_06_small.compressed */; };
+		4C5A55761DA9504400B7DDEA /* sample_07_small.compressed in Resources */ = {isa = PBXBuildFile; fileRef = 4C5BCC4C1DA545440063D165 /* sample_07_small.compressed */; };
+		4C5A55771DA9504400B7DDEA /* sample_08_small.compressed in Resources */ = {isa = PBXBuildFile; fileRef = 4C5BCC4D1DA545440063D165 /* sample_08_small.compressed */; };
+		4C5A55781DA9504400B7DDEA /* sample_09_small.compressed in Resources */ = {isa = PBXBuildFile; fileRef = 4C5BCC4E1DA545440063D165 /* sample_09_small.compressed */; };
+		4C5A557A1DA951D900B7DDEA /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A55791DA951D900B7DDEA /* UIImageExtension.swift */; };
 		4C5BCC2F1DA543FB0063D165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BCC2E1DA543FB0063D165 /* AppDelegate.swift */; };
-		4C5BCC311DA543FB0063D165 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BCC301DA543FB0063D165 /* ViewController.swift */; };
+		4C5BCC311DA543FB0063D165 /* TiltShiftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BCC301DA543FB0063D165 /* TiltShiftTableViewController.swift */; };
 		4C5BCC341DA543FB0063D165 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5BCC321DA543FB0063D165 /* Main.storyboard */; };
 		4C5BCC361DA543FB0063D165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C5BCC351DA543FB0063D165 /* Assets.xcassets */; };
 		4C5BCC391DA543FB0063D165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5BCC371DA543FB0063D165 /* LaunchScreen.storyboard */; };
@@ -17,12 +23,25 @@
 		4C5BCC481DA544610063D165 /* sample_03_small.compressed in Resources */ = {isa = PBXBuildFile; fileRef = 4C5BCC431DA544610063D165 /* sample_03_small.compressed */; };
 		4C5BCC491DA544610063D165 /* sample_04_small.compressed in Resources */ = {isa = PBXBuildFile; fileRef = 4C5BCC441DA544610063D165 /* sample_04_small.compressed */; };
 		4C5BCC4A1DA544610063D165 /* sample_05_small.compressed in Resources */ = {isa = PBXBuildFile; fileRef = 4C5BCC451DA544610063D165 /* sample_05_small.compressed */; };
+		4C5BCC511DA547430063D165 /* Compressor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5BCC501DA547430063D165 /* Compressor.framework */; };
+		4C5BCC531DA54E4B0063D165 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BCC521DA54E4B0063D165 /* ImageTableViewCell.swift */; };
+		4CA52F2F1DA76EDE00F90D3E /* TiltShiftImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA52F2E1DA76EDE00F90D3E /* TiltShiftImage.swift */; };
+		4CA52F321DA7720800F90D3E /* TiltShiftImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA52F311DA7720800F90D3E /* TiltShiftImageProvider.swift */; };
+		4CA52F341DA775C200F90D3E /* TiltShiftOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA52F331DA775C200F90D3E /* TiltShiftOperation.swift */; };
+		4CA52F371DA7763200F90D3E /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA52F361DA7763200F90D3E /* AsyncOperation.swift */; };
+		4CA52F3A1DA7766900F90D3E /* ImageFilterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA52F391DA7766900F90D3E /* ImageFilterOperation.swift */; };
+		4CA52F3C1DA7800300F90D3E /* DataLoadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA52F3B1DA7800300F90D3E /* DataLoadOperation.swift */; };
+		4CA52F3E1DA7801C00F90D3E /* ImageDecompressionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA52F3D1DA7801C00F90D3E /* ImageDecompressionOperation.swift */; };
+		4CA52F401DA7804C00F90D3E /* ImageFilterOutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA52F3F1DA7804C00F90D3E /* ImageFilterOutputOperation.swift */; };
+		4CA52F421DA7839000F90D3E /* NetworkSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA52F411DA7839000F90D3E /* NetworkSimulator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C5A55731DA93F9400B7DDEA /* GradientGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientGenerator.swift; path = Utilities/GradientGenerator.swift; sourceTree = "<group>"; };
+		4C5A55791DA951D900B7DDEA /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageExtension.swift; path = Utilities/UIImageExtension.swift; sourceTree = "<group>"; };
 		4C5BCC2B1DA543FB0063D165 /* TiltShiftTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiltShiftTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5BCC2E1DA543FB0063D165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C5BCC301DA543FB0063D165 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C5BCC301DA543FB0063D165 /* TiltShiftTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftTableViewController.swift; sourceTree = "<group>"; };
 		4C5BCC331DA543FB0063D165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C5BCC351DA543FB0063D165 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C5BCC381DA543FB0063D165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +55,17 @@
 		4C5BCC4C1DA545440063D165 /* sample_07_small.compressed */ = {isa = PBXFileReference; lastKnownFileType = file; name = sample_07_small.compressed; path = "../../Operation-Intro.playground/Resources/sample_07_small.compressed"; sourceTree = "<group>"; };
 		4C5BCC4D1DA545440063D165 /* sample_08_small.compressed */ = {isa = PBXFileReference; lastKnownFileType = file; name = sample_08_small.compressed; path = "../../Operation-Intro.playground/Resources/sample_08_small.compressed"; sourceTree = "<group>"; };
 		4C5BCC4E1DA545440063D165 /* sample_09_small.compressed */ = {isa = PBXFileReference; lastKnownFileType = file; name = sample_09_small.compressed; path = "../../Operation-Intro.playground/Resources/sample_09_small.compressed"; sourceTree = "<group>"; };
+		4C5BCC501DA547430063D165 /* Compressor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Compressor.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Decompressor-firoonqvrykjxjanvbnxthwdqjep/Build/Products/Debug-iphonesimulator/Compressor.framework"; sourceTree = "<group>"; };
+		4C5BCC521DA54E4B0063D165 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		4CA52F2E1DA76EDE00F90D3E /* TiltShiftImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TiltShiftImage.swift; path = Model/TiltShiftImage.swift; sourceTree = "<group>"; };
+		4CA52F311DA7720800F90D3E /* TiltShiftImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TiltShiftImageProvider.swift; path = Model/TiltShiftImageProvider.swift; sourceTree = "<group>"; };
+		4CA52F331DA775C200F90D3E /* TiltShiftOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TiltShiftOperation.swift; path = Operations/TiltShiftOperation.swift; sourceTree = "<group>"; };
+		4CA52F361DA7763200F90D3E /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsyncOperation.swift; path = Operations/Abstract/AsyncOperation.swift; sourceTree = "<group>"; };
+		4CA52F391DA7766900F90D3E /* ImageFilterOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFilterOperation.swift; path = Operations/Abstract/ImageFilterOperation.swift; sourceTree = "<group>"; };
+		4CA52F3B1DA7800300F90D3E /* DataLoadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataLoadOperation.swift; path = Operations/DataLoadOperation.swift; sourceTree = "<group>"; };
+		4CA52F3D1DA7801C00F90D3E /* ImageDecompressionOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDecompressionOperation.swift; path = Operations/ImageDecompressionOperation.swift; sourceTree = "<group>"; };
+		4CA52F3F1DA7804C00F90D3E /* ImageFilterOutputOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFilterOutputOperation.swift; path = Operations/ImageFilterOutputOperation.swift; sourceTree = "<group>"; };
+		4CA52F411DA7839000F90D3E /* NetworkSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkSimulator.swift; path = Utilities/NetworkSimulator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +73,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C5BCC511DA547430063D165 /* Compressor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C5A55701DA9336B00B7DDEA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C5BCC521DA54E4B0063D165 /* ImageTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4C5A55711DA9337900B7DDEA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C5BCC301DA543FB0063D165 /* TiltShiftTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4C5A55721DA933B900B7DDEA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4C5BCC321DA543FB0063D165 /* Main.storyboard */,
+				4C5BCC371DA543FB0063D165 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		4C5BCC221DA543FB0063D165 = {
 			isa = PBXGroup;
 			children = (
 				4C5BCC2D1DA543FB0063D165 /* TiltShiftTableView */,
 				4C5BCC2C1DA543FB0063D165 /* Products */,
+				4C5BCC4F1DA547430063D165 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,9 +127,12 @@
 			children = (
 				4C5BCC401DA544280063D165 /* ImageResources */,
 				4C5BCC2E1DA543FB0063D165 /* AppDelegate.swift */,
-				4C5BCC301DA543FB0063D165 /* ViewController.swift */,
-				4C5BCC321DA543FB0063D165 /* Main.storyboard */,
-				4C5BCC371DA543FB0063D165 /* LaunchScreen.storyboard */,
+				4CA52F351DA775CB00F90D3E /* Operations */,
+				4C5A55711DA9337900B7DDEA /* View Controllers */,
+				4CA52F431DA7839700F90D3E /* Utilities */,
+				4C5A55701DA9336B00B7DDEA /* Views */,
+				4CA52F301DA76F2E00F90D3E /* Model */,
+				4C5A55721DA933B900B7DDEA /* Storyboards */,
 				4C5BCC3A1DA543FB0063D165 /* Info.plist */,
 			);
 			path = TiltShiftTableView;
@@ -93,6 +153,54 @@
 				4C5BCC351DA543FB0063D165 /* Assets.xcassets */,
 			);
 			name = ImageResources;
+			sourceTree = "<group>";
+		};
+		4C5BCC4F1DA547430063D165 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C5BCC501DA547430063D165 /* Compressor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CA52F301DA76F2E00F90D3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CA52F2E1DA76EDE00F90D3E /* TiltShiftImage.swift */,
+				4CA52F311DA7720800F90D3E /* TiltShiftImageProvider.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4CA52F351DA775CB00F90D3E /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				4CA52F381DA7763900F90D3E /* Abstract */,
+				4CA52F3B1DA7800300F90D3E /* DataLoadOperation.swift */,
+				4CA52F3D1DA7801C00F90D3E /* ImageDecompressionOperation.swift */,
+				4CA52F331DA775C200F90D3E /* TiltShiftOperation.swift */,
+				4CA52F3F1DA7804C00F90D3E /* ImageFilterOutputOperation.swift */,
+			);
+			name = Operations;
+			sourceTree = "<group>";
+		};
+		4CA52F381DA7763900F90D3E /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				4CA52F361DA7763200F90D3E /* AsyncOperation.swift */,
+				4CA52F391DA7766900F90D3E /* ImageFilterOperation.swift */,
+			);
+			name = Abstract;
+			sourceTree = "<group>";
+		};
+		4CA52F431DA7839700F90D3E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4CA52F411DA7839000F90D3E /* NetworkSimulator.swift */,
+				4C5A55791DA951D900B7DDEA /* UIImageExtension.swift */,
+				4C5A55731DA93F9400B7DDEA /* GradientGenerator.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +262,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C5A55751DA9504400B7DDEA /* sample_06_small.compressed in Resources */,
+				4C5A55761DA9504400B7DDEA /* sample_07_small.compressed in Resources */,
+				4C5A55771DA9504400B7DDEA /* sample_08_small.compressed in Resources */,
+				4C5A55781DA9504400B7DDEA /* sample_09_small.compressed in Resources */,
 				4C5BCC391DA543FB0063D165 /* LaunchScreen.storyboard in Resources */,
 				4C5BCC361DA543FB0063D165 /* Assets.xcassets in Resources */,
 				4C5BCC471DA544610063D165 /* sample_02_small.compressed in Resources */,
@@ -172,8 +284,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C5BCC311DA543FB0063D165 /* ViewController.swift in Sources */,
+				4CA52F3C1DA7800300F90D3E /* DataLoadOperation.swift in Sources */,
+				4CA52F3E1DA7801C00F90D3E /* ImageDecompressionOperation.swift in Sources */,
+				4C5BCC531DA54E4B0063D165 /* ImageTableViewCell.swift in Sources */,
+				4CA52F421DA7839000F90D3E /* NetworkSimulator.swift in Sources */,
+				4C5A55741DA93F9400B7DDEA /* GradientGenerator.swift in Sources */,
+				4CA52F321DA7720800F90D3E /* TiltShiftImageProvider.swift in Sources */,
+				4CA52F2F1DA76EDE00F90D3E /* TiltShiftImage.swift in Sources */,
+				4C5BCC311DA543FB0063D165 /* TiltShiftTableViewController.swift in Sources */,
 				4C5BCC2F1DA543FB0063D165 /* AppDelegate.swift in Sources */,
+				4C5A557A1DA951D900B7DDEA /* UIImageExtension.swift in Sources */,
+				4CA52F401DA7804C00F90D3E /* ImageFilterOutputOperation.swift in Sources */,
+				4CA52F341DA775C200F90D3E /* TiltShiftOperation.swift in Sources */,
+				4CA52F371DA7763200F90D3E /* AsyncOperation.swift in Sources */,
+				4CA52F3A1DA7766900F90D3E /* ImageFilterOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +457,7 @@
 				4C5BCC3F1DA543FB0063D165 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

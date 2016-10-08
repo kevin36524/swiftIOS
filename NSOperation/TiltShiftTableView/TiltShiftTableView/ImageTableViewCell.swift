@@ -20,25 +20,44 @@
  * THE SOFTWARE.
  */
 
-import Foundation
+import UIKit
 
-public struct NetworkSimulator {
-    public static func asyncLoadDataAtURL(url: URL, completion: @escaping ((_ data: Data?) -> ())) {
-        
-        OperationQueue().addOperation {
-            let data = syncLoadDataAtURL(url: url)
-            completion(data)
+class ImageTableViewCell: UITableViewCell {
+    
+    var tiltShiftImage: TiltShiftImage? {
+        didSet {
+            if let tiltShiftImage = tiltShiftImage {
+                titleLabel.text = tiltShiftImage.imageTitle
+                updateImageViewWithImage(image: nil)
+            }
         }
     }
     
-    static func syncLoadDataAtURL(url: URL) -> Data? {
-        // Wait somewhere between 0 and 3 seconds
-        let randomWaitingTime = arc4random_uniform(2 * 1000000)
-        usleep(randomWaitingTime)
-        do {
-            return try Data(contentsOf: url);
-        } catch {
-            return nil;
+    @IBOutlet weak var tsImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    func updateImageViewWithImage(image: UIImage?) {
+        if let image = image {
+            tsImageView.image = image
+            tsImageView.alpha = 0
+            UIView.animate(withDuration: 0.3, animations: {
+                self.tsImageView.alpha = 1.0
+                self.activityIndicator.alpha = 0
+                }, completion: {
+                    _ in
+                    self.activityIndicator.stopAnimating()
+            })
+            
+        } else {
+            tsImageView.image = nil
+            tsImageView.alpha = 0
+            activityIndicator.alpha = 1.0
+            activityIndicator.startAnimating()
         }
     }
 }
+
+
+
+
