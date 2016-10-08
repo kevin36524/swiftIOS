@@ -17,7 +17,7 @@ class ImageFilterOperation: Operation {
     var filterOutput: UIImage?
     private let _filterInput: UIImage?
     
-    init(inputImage: UIImage) {
+    init(inputImage: UIImage?) {
         _filterInput = inputImage;
         super.init()
     }

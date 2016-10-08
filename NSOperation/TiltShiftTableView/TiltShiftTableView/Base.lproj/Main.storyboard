@@ -19,10 +19,12 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="320"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a5f-EY-A1b" id="6uQ-WB-QdI">
-                                    <frame key="frameInset" width="375" height="319"/>
+                                    <frame key="frameInset" width="375" height="319.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rxK-q1-S94"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rxK-q1-S94">
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oiQ-ZR-nDJ">
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTE-qt-Ra5">
@@ -53,6 +55,7 @@
                                         <constraint firstItem="Pkp-ga-4mc" firstAttribute="centerY" secondItem="6uQ-WB-QdI" secondAttribute="centerY" id="xi8-VD-gkz"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="activityIndicator" destination="Pkp-ga-4mc" id="6as-Xw-zES"/>
                                     <outlet property="titleLabel" destination="JTE-qt-Ra5" id="MKA-p8-SZL"/>

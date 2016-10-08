@@ -12,21 +12,27 @@ import Compressor
 
 class TiltShiftImageProvider {
     
-    let tiltShiftImage: TiltShiftImage
+    private let operationQueue = OperationQueue()
+    public let tiltShiftImage: TiltShiftImage
     
-    init(tiltImage: TiltShiftImage) {
+    init(tiltImage: TiltShiftImage, completion:((UIImage?) -> Void)?) {
         self.tiltShiftImage = tiltImage
+        let url = Bundle.main.url(forResource: tiltImage.imageName, withExtension: "compressed")
+        
+        let dataLoad = DataLoadOperation(url: url, completion: nil)
+        let imageDecompress = ImageDecompressionOperaration(data: nil, completion: nil)
+        let tiltShift = TiltShiftOperation(inputImage: nil)
+        let filterOutput = ImageFilterOutputOperation(completion: completion)
+        
+        dataLoad |> imageDecompress 
+        imageDecompress |> tiltShift
+        tiltShift |> filterOutput
+        
+        operationQueue.addOperations([dataLoad, imageDecompress, tiltShift, filterOutput], waitUntilFinished: false)
     }
     
-    var image: UIImage? {
-        let url = Bundle.main.url(forResource: tiltShiftImage.imageName, withExtension: "compressed");
-        
-        guard let rawData = NetworkSimulator.syncLoadData(AtUrl: url!),
-            let decompressedData = Compressor.decompressData(inputData: rawData),
-            let inputImage = UIImage(data: decompressedData) else { return .none }
-        
-        let mask = topAndBottomGradient(size: inputImage.size)
-        return inputImage.applyBlurWithRadius(blurRadius: 10, maskImage: mask);
+    func cancel() {
+        operationQueue.cancelAllOperations()
     }
 }
 

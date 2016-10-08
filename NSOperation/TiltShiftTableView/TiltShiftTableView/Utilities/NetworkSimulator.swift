@@ -9,19 +9,21 @@
 import Foundation
 
 class NetworkSimulator {
-    public static func asyncLoadData(AtUrl url:URL, completion:((_ data: Data?) -> Void)?) {
+    public static func asyncLoadData(AtUrl url:URL?, completion:((_ data: Data?) -> Void)?) {
         OperationQueue().addOperation {
             let data = syncLoadData(AtUrl: url)
             completion!(data)
         }
     }
     
-    public static func syncLoadData(AtUrl url:URL) -> Data? {
+    public static func syncLoadData(AtUrl url:URL?) -> Data? {
         var returnData:Data? = nil;
         let waitTime = arc4random_uniform(2 * 1000000)
         usleep(waitTime)
         
-        returnData = try? Data.init(contentsOf: url)
+        if let url = url {
+            returnData = try? Data.init(contentsOf: url)
+        }
         
         return returnData
     }

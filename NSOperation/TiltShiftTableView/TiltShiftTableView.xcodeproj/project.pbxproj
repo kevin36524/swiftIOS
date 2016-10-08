@@ -34,6 +34,7 @@
 		4CA52F3E1DA7801C00F90D3E /* ImageDecompressionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA52F3D1DA7801C00F90D3E /* ImageDecompressionOperation.swift */; };
 		4CA52F401DA7804C00F90D3E /* ImageFilterOutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA52F3F1DA7804C00F90D3E /* ImageFilterOutputOperation.swift */; };
 		4CA52F421DA7839000F90D3E /* NetworkSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA52F411DA7839000F90D3E /* NetworkSimulator.swift */; };
+		4CCDBCEA1DA9A3640008AA7A /* NSOperationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDBCE91DA9A3640008AA7A /* NSOperationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		4CA52F3D1DA7801C00F90D3E /* ImageDecompressionOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDecompressionOperation.swift; path = Operations/ImageDecompressionOperation.swift; sourceTree = "<group>"; };
 		4CA52F3F1DA7804C00F90D3E /* ImageFilterOutputOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFilterOutputOperation.swift; path = Operations/ImageFilterOutputOperation.swift; sourceTree = "<group>"; };
 		4CA52F411DA7839000F90D3E /* NetworkSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkSimulator.swift; path = Utilities/NetworkSimulator.swift; sourceTree = "<group>"; };
+		4CCDBCE91DA9A3640008AA7A /* NSOperationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSOperationExtension.swift; path = Utilities/NSOperationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				4CA52F411DA7839000F90D3E /* NetworkSimulator.swift */,
 				4C5A55791DA951D900B7DDEA /* UIImageExtension.swift */,
 				4C5A55731DA93F9400B7DDEA /* GradientGenerator.swift */,
+				4CCDBCE91DA9A3640008AA7A /* NSOperationExtension.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			files = (
 				4CA52F3C1DA7800300F90D3E /* DataLoadOperation.swift in Sources */,
 				4CA52F3E1DA7801C00F90D3E /* ImageDecompressionOperation.swift in Sources */,
+				4CCDBCEA1DA9A3640008AA7A /* NSOperationExtension.swift in Sources */,
 				4C5BCC531DA54E4B0063D165 /* ImageTableViewCell.swift in Sources */,
 				4CA52F421DA7839000F90D3E /* NetworkSimulator.swift in Sources */,
 				4C5A55741DA93F9400B7DDEA /* GradientGenerator.swift in Sources */,
